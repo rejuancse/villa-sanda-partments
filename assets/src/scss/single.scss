@@ -1,0 +1,230 @@
+@import "variables";
+@import "core/typography";
+@import "core/structure";
+
+.single-post-item {
+	text-align: left;
+	margin: 90px 0;
+
+	.feature-img {
+		margin-bottom: 25px;
+
+		img {
+			width: 100%;
+			border-radius: 3px;
+			overflow: hidden;
+		}
+	}
+
+	// Blog Meta
+	.blog-meta {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		.elsio_tx {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+
+			.datetime,
+			.comments {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				font-size: 16px;
+				line-height: 24px;
+				color: #191919;
+			}
+		}
+
+		.blog-tags {
+			a {
+				font-family: $font-villa;
+				background: #F0F6FF;
+				padding: 7px 14px;
+				border-radius: 15px;
+				font-size: 12px;
+				line-height: 24px;
+				font-weight: 700;
+				color: #191919;
+				margin-left: 5px;
+				text-decoration: none;
+				transition: .3s;
+
+				&:hover {
+					background: #0543A1;
+					color: #fff;
+				}
+			}
+		}
+	}
+
+	.post-title {
+		line-height: 58px;
+		width: 87%;
+		margin: 0 auto 10px;
+
+		@include breakpoint(mobileonly) {
+			width: 100%;
+			font-size: 36px;
+			font-weight: 700;
+			line-height: 44px;
+		}
+	}
+
+	.blog-meta.author {
+		.author,
+		a {
+			font-size: 16px;
+			line-height: 26px;
+			font-weight: 400;
+			color: #191919;
+			font-family: $font-main;
+		}
+	}
+
+	// Blog Content
+	.single-post-content {
+		font-size: 16px;
+		line-height: 24px;
+		color: #191919;
+		text-align: left;
+		margin-bottom: 50px;
+		border-bottom: 1px solid #E6E6E6;
+		padding-bottom: 48px;
+
+		@include breakpoint(ipad) {
+			margin-bottom: 60px;
+		}
+
+		@include breakpoint(mobileonly) {
+			margin-bottom: 60px;
+		}
+
+		h2 {
+			color: #0d0d0d;
+			line-height: 44px;
+			margin-top: 50px;
+			margin-bottom: 20px;
+
+			@include breakpoint(ipad) {
+				line-height: 42px;
+				margin-top: 35px;
+				margin-bottom: 15px;
+				font-size: 30px;
+			}
+
+			@include breakpoint(mobileonly) {
+				line-height: 42px;
+				margin-top: 35px;
+				margin-bottom: 15px;
+				font-size: 30px;
+			}
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.wp-block-media-text__content p {
+			margin: 0 !important;
+		}
+
+		ol {
+			margin: 0 0 20px;
+			padding: 0 18px;
+
+			li {
+				line-height: 19px;
+				margin-bottom: 15px;
+			}
+		}
+
+		.wp-block-quote {
+			border-left: 5px solid #3a607c;
+			padding: 48px 48px 48px 43px;
+			background: #f9f9f9;
+			font-size: 20px;
+			line-height: 30px;
+			color: #0d0d0d;
+			font-family: $font-villa;
+			font-weight: 700;
+			margin-top: 28px;
+			margin-bottom: 28px;
+
+			@include breakpoint(mobileonly) {
+				padding: 40px 40px 40px 30px;
+				font-size: 18px;
+				line-height: 30px;
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.wp-block-image.alignwide {
+		position: relative;
+		margin: 60px calc(55% - 27.6vw);
+		max-width: 960px;
+		width: 960px;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// NEXT - PREV POST
+	.villa-blog-post {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.next-post-link,
+		.previous-post-link {
+			a {
+				display: flex;
+				align-items: center;
+				font-size: 18px;
+				line-height: 24px;
+				font-weight: 700;
+				text-decoration: none;
+				gap: 20px;
+				color: #191919;
+				transition: .3s;
+
+				&:hover {
+					color: #002B6B;
+				}
+			}
+		}
+	}
+
+	// Related Page
+	.related-posts-wrapper {
+		margin-bottom: 128px;
+
+		@include breakpoint(ipad) {
+			margin-bottom: 60px;
+		}
+
+		@include breakpoint(mobileonly) {
+			margin-bottom: 60px;
+		}
+
+		.related-posts-title {
+			font-size: 36px;
+			line-height: 44px;
+			text-align: left;
+			margin-bottom: 60px;
+		}
+	}
+
+	// Block CSS
+	.villa-call-to-action .action__title {
+		margin-top:  0 !important;
+	}
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.043" height="10" viewBox="0 0 15.043 10">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.019" y1="0.5" x2="0.984" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#422370"/>
+      <stop offset="1" stop-color="#3a607c"/>
+    </linearGradient>
+  </defs>
+  <path id="arrow_right_villa_FILL1_wght300_GRAD0_opsz20" d="M222.044-648.153,221-649.174l3.249-3.249H212v-1.459h12.25L221-657.132l1.043-1.021,5,5Z" transform="translate(-212.001 658.153)" fill="url(#linear-gradient)"/>
+</svg>

@@ -1,0 +1,101 @@
+.villa-search-block {
+	position: relative;
+	margin: 0;
+
+	.villa-home-slider {
+		.slider-item {
+			height: 900px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+
+			@include breakpoint(ipadpro) {
+				height: 675px;
+			}
+
+			@include breakpoint(ipad) {
+				height: 575px;
+			}
+
+			@include breakpoint(mobileonly) {
+				height: 590px;
+			}
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background: #1111114d;
+				z-index: 9;
+			}
+		}
+	}
+
+	.search-wrap {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+
+		@include breakpoint(mobileonly) {
+			top: 50%;
+			left: 0;
+			transform: translate(0%, -50%);
+		}
+
+		.nav-search-inner .search:focus {
+			border: 1px solid #fff;
+		}
+
+		input {
+			outline: none;
+
+			&:focus {
+				border: none;
+			}
+		}
+	}
+
+	// Dots Style
+	.slick-dots {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        transform: translate(-50%, 0%);
+		z-index: 9;
+
+        li {
+            display: inline-block;
+            margin: 0 5px;
+			width: 10px;
+			height: 10px;
+			border: 1px solid #fff;
+			border-radius: 50%;
+			cursor: pointer;
+			transition: .3s;
+
+            button {
+                font-size: 0;
+				position: absolute;
+				border-color: transparent;
+				width: 10px !important;
+				height: 10px !important;
+				border-radius: 50%;
+				background: transparent;
+				z-index: 9;
+            }
+
+            &.slick-active {
+				background-color: #fff;
+            }
+        }
+    }
+}
+

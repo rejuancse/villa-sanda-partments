@@ -1,0 +1,21 @@
+a {
+	font-weight: 400;
+	text-decoration: none;
+	// @include transition(color);
+
+	// &:hover,
+	// &:focus {
+	// 	color: $color__major;
+	// }
+
+	&:focus {
+		outline: thin dotted;
+		outline: none;
+	}
+
+	&:focus-visible {
+		border: none;
+		// outline: 1px dashed $color__major;
+		background: transparent;
+	}
+}

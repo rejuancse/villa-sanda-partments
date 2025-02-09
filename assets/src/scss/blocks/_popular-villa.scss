@@ -1,0 +1,225 @@
+.popular-villa-block {
+    padding: 90px 0 120px;
+
+    @include breakpoint(mobileonly) {
+        padding: 43px 0 60px;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 41px;
+        letter-spacing: 1.08px;
+        color: #111;
+        margin-bottom: 52px;
+        text-align: center;
+
+        @include breakpoint(mobileonly) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .card {
+        width: 710px;
+
+        @media (min-width: 1024px ) and (max-width: 1366px ) {
+            width: 440px;
+        }
+
+        @include breakpoint(ipad) {
+            width: 480px;
+        }
+
+        @include breakpoint(mobileonly) {
+            width: 100%;
+        }
+
+        .feature-image {
+            height: 500px;
+            overflow: hidden;
+            border-radius: 8px;
+
+            @include breakpoint(ipadpro) {
+                height: auto;
+            }
+
+            @include breakpoint(ipad) {
+                height: auto;
+            }
+
+            @include breakpoint(mobileonly) {
+                height: auto;
+            }
+
+            img {
+                width: 100%;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+        }
+    }
+
+    .slick-track {
+        transform: translate3d(0px, 0px, 0px);
+    }
+
+    .slick-slide {
+        padding-left: 30px;
+
+        @include breakpoint(mobileonly) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        @media screen and (max-width: 480px ) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    .slick-list.draggable {
+        padding: 0 !important;
+    }
+
+    .villa-list {
+        .villa-info {
+            width: 80%;
+            margin-top: 28px;
+
+            @include breakpoint(ipadpro) {
+                width: 100%;
+            }
+
+            @include breakpoint(ipad) {
+                width: 100%;
+            }
+
+            @include breakpoint(mobileonly) {
+                width: 100%;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            h3 {
+                font-size: 30px;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: 0.9px;
+                color: #111111;
+                transition: .3s;
+                margin-bottom: 15px;
+
+                &:hover {
+                    color: #232D6E;
+                }
+
+                @include breakpoint(mobileonly) {
+                    font-size: 24px;
+                    line-height: 28px;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                font-weight: 400;
+                letter-spacing: 0.48px;
+                color: #63605F;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .slick-arrow {
+        width: 40px;
+        height: 40px;
+        background: #ffffffcc;
+        border-radius: 50%;
+        position: absolute;
+        top: 47%;
+        left: 40px;
+        text-align: center;
+        padding: 10px 0;
+        cursor: pointer;
+        z-index: 9;
+        transition: .4s;
+
+        @include breakpoint(mobileonly) {
+            top: 25%;
+            left: 30px;
+        }
+
+        @media screen and (max-width: 480px ) {
+            top: 35%;
+        }
+
+        &:hover {
+            background: #ffffff;
+        }
+
+        &.nextNav {
+            right: 40px;
+            left: auto;
+            transform: rotate(180deg);
+
+            @include breakpoint(mobileonly) {
+                right: 30px;
+            }
+        }
+    }
+
+    // villa-services
+    &.villa-services {
+        padding: 116px 0 120px;
+
+        @include breakpoint(ipad) {
+            padding: 80px 0 80px;
+        }
+
+        @include breakpoint(mobileonly) {
+            padding: 60px 0 60px;
+        }
+
+        .service-header {
+            h2 {
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.48px;
+                color: #63605F;
+                text-align: center;
+                width: 750px;
+                margin: 0 auto 64px;
+
+                @include breakpoint(ipad) {
+                    width: 100%;
+                }
+
+                @include breakpoint(mobileonly) {
+                    width: 100%;
+                }
+
+                a {
+                    color: #232D6E;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .villa-info {
+            h3 {
+                font-size: 24px;
+                line-height: 27px;
+                letter-spacing: 0.72px;
+            }
+            p {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,98 @@
+/* -----------------------------------
+	Hero Video
+------------------------------------- */
+.villa-hero-video {
+    .hero-video {
+        position: relative;
+        overflow: hidden;
+        z-index: 100;
+        width: 100%;
+        height: 700px;
+        background: #232D6E;
+
+        @include breakpoint(ipad) {
+            height: 640px;
+        }
+
+        @include breakpoint(mobileonly) {
+            height: 490px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent linear-gradient(180deg, #11111100 0%, #111111 100%) 0% 0% no-repeat padding-box;
+            z-index: 999;
+        }
+
+        .video-bg {
+            position: absolute;
+            border: 0;
+            left: 50%;
+            top: 50%;
+            transform: translate( -50%, -50%);
+            z-index: 1;
+            width: 100%;
+            height: auto;
+
+            @media (max-width: 1254px) {
+                width: auto;
+                height: 100%;
+            }
+        }
+    }
+
+    .content-info {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+
+        @include breakpoint(mobileonly) {
+            bottom: 20px;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 36px;
+            line-height: 41px;
+            letter-spacing: 1.08px;
+            font-weight: 400;
+            margin-bottom: 20px;
+
+            @include breakpoint(mobileonly) {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+        }
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            letter-spacing: 0.48px;
+            line-height: 26px;
+            font-weight: 400;
+            margin: 0;
+
+            @include breakpoint(mobileonly) {
+                line-height: 24px;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 700;
+                transition: .4s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

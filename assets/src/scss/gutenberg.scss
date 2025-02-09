@@ -1,0 +1,100 @@
+@import "variables";
+@import "core/structure";
+
+.block-editor-block-list__layout .align-full,
+.block-editor-block-list__layout .alignfull,
+.block-editor-block-list__layout .breakout {
+	left: 0;
+	right: 0;
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	position: relative;
+}
+
+@media (min-width: 851px) {
+	.image-text-1 figure {
+		width: 60% !important;
+		margin-right: -71px !important;
+		margin-bottom: 43px !important;
+	}
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.editor-styles-wrapper iframe:not([frameborder]) {
+	height: auto !important;
+}
+
+.wp-block-group__inner-container {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1170px !important;
+	padding: 0 15px;
+	width: 100%;
+}
+
+.wp-block-image .alignright {
+	text-align: right;
+}
+
+.btn.btn-primary {
+	background-color: #c0e6e0;
+    border: 1px solid #c0e6e0;
+    padding: 13px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    color: #232D6E;
+    text-decoration: none;
+    letter-spacing: 2.52px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    position: relative;
+    height: 48px;
+	z-index: 9;
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: #000;
+		-webkit-transform: scaleX(.3);
+		transform: scaleX(.3);
+		opacity: 0;
+		transition: all .3s;
+		border-radius: 4px;
+	}
+
+	&:active:hover {
+		background-color: transparent;
+		border: none;
+	}
+	&:hover::before{
+		opacity: 1;
+		background-color: #C9F2EC;
+		-webkit-transform: scaleX(1);
+		transform: scaleX(1);
+		transition: -webkit-transform .3s cubic-bezier(.08, .35, .13, 1.02), opacity .3s;
+		transition: transform .3s cubic-bezier(.08, .35, .13, 1.02), opacity
+	}
+}
+
+@import "blocks/villa-search";
+@import "blocks/villa-home-slider";
+@import "blocks/half-text-half-media";
+@import "blocks/trust-icon-list-block";
+@import "blocks/favorite-destination";
+@import "blocks/villa-offers";
+@import "blocks/popular-villa";
+@import "blocks/villa-testimonial-block";
+@import "blocks/hero-video";

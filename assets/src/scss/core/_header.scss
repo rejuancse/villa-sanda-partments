@@ -1,0 +1,431 @@
+@import "navigation/navigation";
+
+.admin-bar .villa-main-menu.sticky {
+	top: 31px !important;
+}
+
+.menu-toggler.collapsed.active {
+	transform: rotate(90deg);
+}
+
+#site-wrapper {
+	position: relative;
+}
+
+.home {
+	.site-header {
+		position: absolute;
+		background-color: transparent;
+
+		&.sticky {
+			background-color: #232d6e;
+		}
+
+		.logo-wrapper {
+			padding-top: 25px;
+			padding-bottom: 20px;
+
+			@include breakpoint(ipadpro) {
+				padding-top: 28px;
+				padding-bottom: 26px;
+			}
+
+			.home-logo {
+				display: block;
+			}
+			.secondary-logo {
+				display: none;
+			}
+		}
+
+		.common-menu-wrap {
+			.nav>li>a {
+				color: #fff;
+			}
+
+			.nav>li>a:before {
+				background-color: #fff;
+			}
+
+			.nav>li.menu-item-has-children>a:after {
+				color: #fff;
+				background-image: url(../../src/images/arrow-down.svg);
+			}
+		}
+
+		.main-menu-wrap {
+			.menu-right-wrap {
+				svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+}
+
+.site-header {
+	background-color: #fff;
+	width: 100%;
+	z-index: 999;
+	padding: 0 15px;
+	height: 106px;
+	transition: 0.6s;
+
+	@media (min-width: 1024px ) and (max-width: 1518px ) {
+		padding: 0;
+	}
+	@include breakpoint(ipadpro ) {
+		padding: 0;
+		height: auto;
+	}
+
+	@include breakpoint(ipad) {
+		padding: 0;
+		height: auto;
+	}
+
+	@include breakpoint(mobileonly) {
+		height: auto;
+	}
+
+	.main-menu-wrap {
+		.menu-right-wrap {
+			@include breakpoint(ipad) {
+				.primary-button {
+					display: none;
+				}
+			}
+			@include breakpoint(mobileonly) {
+				.primary-button {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.logo-wrapper {
+		.home-logo {
+			display: none;
+		}
+
+		.secondary-logo {
+			display: block;
+		}
+	}
+
+	.villa-header {
+		height: 110px;
+		padding: 23px 0;
+
+		@include breakpoint(ipadpro) {
+			height: 110px;
+		}
+
+		@include breakpoint(ipad) {
+			height: 110px;
+		}
+
+		@include breakpoint(mobileonly) {
+			height: 100px;
+			padding: 11px 0;
+			overflow: hidden;
+		}
+
+		@include breakpoint(mobileonly) {
+			.col-md-3 {
+				-ms-flex: 0 0 63%;
+				flex: 0 0 63%;
+				max-width: 63%;
+			}
+			.col-md-9 {
+				-ms-flex: 0 0 37%;
+				flex: 0 0 37%;
+				max-width: 37%;
+			}
+		}
+
+		@media (max-width: 399px) {
+			height: 85px;
+			padding: 15px 0;
+
+			.col-md-3 {
+				-ms-flex: 0 0 60%;
+				flex: 0 0 60%;
+				max-width: 60%;
+			}
+
+			.col-md-9 {
+				-ms-flex: 0 0 40%;
+				flex: 0 0 40%;
+				max-width: 40%;
+			}
+		}
+	}
+
+	.villa-main-menu {
+		.site-branding {
+			display: none;
+		}
+
+		@media (min-width: 982px) and (max-width: 1180px) {
+			.site-branding {
+				display: none !important;
+			}
+
+			#navigation.navigation .nav-menus-wrapper {
+				text-align: center !important;
+			}
+		}
+
+		@media only screen and (min-width: 981px) {
+			&.sticky {
+				position: fixed;
+				top: -1px;
+				background: #2d2a26;
+				left: 0;
+				animation-name: stickMove;
+				animation-duration: 0.9s;
+				width: 100%;
+				z-index: 999;
+
+				#navigation.navigation {
+					.nav-menus-wrapper {
+						text-align: right;
+
+						.nav-menu > li > a {
+							padding: 17px 10px 17px;
+							font-size: 14px;
+							font-weight: 400;
+							color: #fff;
+							text-transform: capitalize;
+						}
+
+						.nav-menu > li:last-child > a {
+							padding-right: 0;
+						}
+					}
+				}
+
+				.header-sticky-wrapper {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+
+					.site-branding {
+						display: block;
+						padding: 5px 0;
+
+						a {
+							width: 120px;
+						}
+					}
+				}
+
+				#navigation .nav-menu li:last-child {
+					.sub-menu {
+						right: 0 !important;
+
+						&:before {
+							right: 40px;
+							left: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.site-title {
+		a {
+			font-size: 1.25rem;
+		}
+	}
+
+	.site-branding {
+		text-align: left;
+		width: 165px;
+		padding: 11px 0px 5px;
+
+		a {
+			display: inline-block;
+
+			img {
+				width: 100%;
+			}
+		}
+
+		@media only screen and (max-width: 981px) and (min-width: 500px) {
+			padding: 10px 0 10px;
+
+			a {
+				img {
+					width: 220px;
+				}
+			}
+		}
+
+		@include breakpoint(mobileonly) {
+			padding: 10px 0 10px;
+
+			@media (max-width: 399px) {
+				padding: 0;
+			}
+		}
+
+		svg {
+			width: 100%;
+		}
+	}
+
+	.sticky {
+		.site-branding {
+			width: 222px !important;
+
+			a img {
+				padding-top: 5px;
+			}
+		}
+	}
+
+	// Villa Search
+	.villa-search-wrap {
+		position: absolute;
+		background: #fff;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: 106px;
+		z-index: 999;
+		display: none;
+
+		@include breakpoint(mobileonly) {
+			height: auto;
+		}
+
+		&.search-ani {
+			-webkit-animation-name: cssAnimation;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-timing-function: ease;
+			-webkit-animation-fill-mode: forwards;
+			transform: translateY(-50%);
+  			transition: all 0.5s ease-in-out;
+		}
+
+		form.villa-search {
+			padding: 23px 0;
+
+			@include breakpoint(mobileonly) {
+				padding: 10px 0;
+			}
+
+			.nav-search-inner {
+				position: relative;
+
+				.search-icons.fa.fa-close {
+					position: absolute;
+					right: 0;
+					top: 32%;
+					font-size: 22px;
+					z-index: 9999;
+					cursor: pointer;
+				}
+			}
+		}
+
+		input#searchword {
+			width: 100%;
+			height: 60px;
+			border-bottom: none;
+			padding: 21px 30px 21px 0;
+			font-size: 22px;
+			line-height: 30px;
+			color: #111111;
+			outline: none;
+			border-top: none;
+			border-right: none;
+			border-left: none;
+
+			&::placeholder {
+				color: #63605f;
+			}
+		}
+	}
+
+	.common-menu-wrap {
+		.nav>li>a {
+			color: #111111;
+		}
+
+		.nav>li>a:before {
+			background-color: #fff;
+		}
+
+		.nav>li.menu-item-has-children>a:after {
+			background-image: url(../../src/images/arrow-down-black.svg);
+			background-repeat: no-repeat;
+			top: 47%;
+			position: absolute;
+			font-family: none !important;
+			right: 1px;
+			width: 13px;
+			height: 7px;
+
+			@media (min-width: 768px ) and (max-width: 1518px ) {
+				right: -7px;
+			}
+		}
+	}
+}
+
+@-webkit-keyframes cssAnimation {
+	from {
+		-webkit-transform: rotate(0deg) scale(0) skew(0deg) translate(0px);
+	}
+	to {
+		-webkit-transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+	}
+}
+
+@keyframes stickMove {
+	from {
+		top: -190px;
+	}
+	to {
+		top: 0px;
+	}
+}
+
+.desktop-mobile {
+	display: none;
+	padding-top: 16px;
+
+	@include breakpoint(mobileonly) {
+		display: block;
+		padding-top: 12px;
+	}
+
+	@media (max-width: 399px) {
+		padding-top: 0;
+	}
+}
+
+.desktop-nav {
+	display: block;
+
+	@include breakpoint(mobileonly) {
+		display: none;
+
+		&#navigation {
+			display: none;
+		}
+
+		&.menu-frame {
+			display: block;
+		}
+	}
+}
+
+.site-content {
+	overflow: hidden;
+}

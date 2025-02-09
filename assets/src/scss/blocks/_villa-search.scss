@@ -1,0 +1,90 @@
+.villa-search-block {
+    &.aligncenter {
+        .search-title {
+            font-size: 48px;
+            line-height: 55px;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 1.44px;
+            margin-bottom: 44px;
+            color: #FFFFFF;
+
+            @include breakpoint(mobileonly) {
+                font-size: 36px;
+                line-height: 42px;
+                margin-bottom: 32px;
+
+                br {
+                    display: none;
+                }
+			}
+        }
+
+        form.villa-search {
+            margin: 0 auto;
+            width: 650px;
+
+            @include breakpoint(mobileonly) {
+				width: 100%;
+			}
+        }
+    }
+
+    .search-wrap {
+        .nav-search-inner {
+            display: flex;
+            align-items: center;
+
+            .search {
+                width: 500px;
+                height: 60px;
+                border: 1px solid #EFF1F9;
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+                outline: none;
+                padding: 21px 15px;
+                font-size: 16px;
+                line-height: 24px;
+                color: #63605F;
+                transition: .4s;
+
+                &::placeholder {
+                    color: #63605F;
+                }
+
+                @media screen and (max-width: 991px ) {
+                	width: 100%;
+                }
+
+                &:focus {
+                    border-color: #232D6E;
+                }
+            }
+
+            .btn.btn-primary {
+                background-color: #232D6E;
+                border: 1px solid #232D6E;
+                color: #fff;
+                height: 60px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                font-size: 15px;
+                line-height: 19px;
+                letter-spacing: 2.7px;
+                padding: 21px 40px;
+                outline: none;
+
+                &:hover::before {
+                    background-color: #3757A2;
+                }
+
+                &:hover {
+                    background-color: #3757A2;
+                    border-color: #3757A2;
+                }
+            }
+        }
+    }
+
+    margin-bottom: 50px;
+}

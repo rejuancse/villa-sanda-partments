@@ -1,0 +1,79 @@
+.subheader-banner {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 400px;
+
+    @include breakpoint(ipad) {
+        height: 335px;
+    }
+
+    @include breakpoint(mobileonly) {
+        height: inherit;;
+    }
+
+    div#breadcrumbs {
+        font-size: 14px;
+        line-height: 24px;
+        color: #fff;
+        margin-top: 26px;
+
+        a {
+            color: #ECBD39;
+        }
+    }
+
+    .subheader-info {
+        width: 60%;
+        padding: 86px 0 86px;
+        margin: 0 auto;
+        text-align: center;
+
+        @include breakpoint(ipad) {
+            width: 80%;
+            padding: 75px 0 76px;
+        }
+
+        @include breakpoint(mobileonly) {
+            width: 100%;
+            padding: 80px 0 60px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 22px;
+
+            @include breakpoint(ipad) {
+                font-size: 48px;
+                line-height: 56px;
+                margin-bottom: 15px;
+            }
+
+            @include breakpoint(mobileonly) {
+                font-size: 38px;
+                line-height: 44px;
+                margin-bottom: 15px;
+            }
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: #fff;
+
+            @include breakpoint(mobileonly) {
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.search {
+    .subheader-banner .subheader-info {
+        padding: 110px 0 86px;
+    }
+}

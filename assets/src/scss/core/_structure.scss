@@ -1,0 +1,46 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+$gutter: 30px;
+
+// grid
+$width__container: 1200px;
+$col-1: 8.3333%;
+$col-2: 16.6666%;
+$col-3: 25%;
+$col-4: 33.3333%;
+$col-5: 41.6666%;
+$col-6: 50%;
+$col-7: 58.3333%;
+$col-8: 66.6666%;
+$col-9: 75%;
+$col-10: 83.3333%;
+$col-11: 91.6666%;
+$col-12: 100%;
+
+// breakpoints
+$breakpoint__small: 575px;
+$breakpoint__medium: 767px;
+$breakpoint__large: 991px;
+$breakpoint__extra-large: 1199px;
+
+// resolution
+$resolution-width__FHD: 1920px;
+
+
+@mixin breakpoint($point) {
+    @if $point == desktop {
+        @media (min-width: 70em) { @content ; }
+    }
+    @else if $point == ipadpro {
+        @media (min-width: 1024px) and (max-width: 1366px) { @content ; }
+    }
+    @else if $point == tablet {
+        @media (min-width: 768px) and (max-width: 1366px) { @content ; }
+    }
+    @else if $point == ipad {
+        @media (min-width: 768px) and (max-width: 1023px) { @content ; }
+    }
+    @else if $point == mobileonly {
+        @media (max-width: 767px)  { @content ; }
+    }
+}
