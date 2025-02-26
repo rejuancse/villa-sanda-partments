@@ -1,4 +1,4 @@
-# Coalition Technologies WordPress Theme
+# Booking WordPress Theme
 
 ## Getting Started
 
